@@ -1,0 +1,57 @@
+id,name,code
+pa_goods_service_segment_10,"Material Vivo Vegetal y Animal, Accesorios y Suministros",10
+pa_goods_service_segment_11,"Material Mineral, Textil y Vegetal y Animal No Comestible",11
+pa_goods_service_segment_12,Material Químico incluyendo Bioquímicos y Materiales de Gas,12
+pa_goods_service_segment_13,"Materiales de Resina, Colofonia, Caucho, Espuma, Película y Elastómericos",13
+pa_goods_service_segment_14,Materiales y Productos de Papel,14
+pa_goods_service_segment_15,"Materiales Combustibles, Aditivos para Combustibles, Lubricantes y Anticorrosivos",15
+pa_goods_service_segment_20,Maquinaria y Accesorios de Minería y Perforación de Pozos,20
+pa_goods_service_segment_21,"Maquinaria y Accesorios para Agricultura, Pesca, Silvicultura y Fauna",21
+pa_goods_service_segment_22,Maquinaria y Accesorios para Construcción y Edificación,22
+pa_goods_service_segment_23,Maquinaria y Accesorios para Manufactura y Procesamiento Industrial,23
+pa_goods_service_segment_24,"Maquinaria, Accesorios y Suministros para Manejo, Acondicionamiento y Almacenamiento de Materiales",24
+pa_goods_service_segment_25,"Vehículos Comerciales, Militares y Particulares, Accesorios y Componentes",25
+pa_goods_service_segment_26,Maquinaria y Accesorios para Generación y Distribución de Energía,26
+pa_goods_service_segment_27,Herramientas y Maquinaria General,27
+pa_goods_service_segment_30,"Componentes y Suministros para Estructuras, Edificación, Construcción y Obras Civiles",30
+pa_goods_service_segment_31,Componentes y Suministros de Manufactura,31
+pa_goods_service_segment_32,Componentes y Suministros Electrónicos,32
+pa_goods_service_segment_39,"Componentes, Accesorios y Suministros de Sistemas Eléctricos e Iluminación",39
+pa_goods_service_segment_40,Componentes y Equipos para Distribución y Sistemas de Acondicionamiento,40
+pa_goods_service_segment_41,"Equipos y Suministros de Laboratorio, de Medición, de Observación y de Pruebas",41
+pa_goods_service_segment_42,"Equipo Médico, Accesorios y Suministros",42
+pa_goods_service_segment_43,Difusión de Tecnologías de Información y Telecomunicaciones,43
+pa_goods_service_segment_44,"Equipos de Oficina, Accesorios y Suministros",44
+pa_goods_service_segment_45,"Equipos y Suministros para Impresión, Fotografia y Audiovisuales",45
+pa_goods_service_segment_46,"Equipos y Suministros de Defensa, Orden Publico, Proteccion, Vigilancia y Seguridad",46
+pa_goods_service_segment_47,Equipos de Limpieza y Suministros,47
+pa_goods_service_segment_48,"Maquinaria, Equipo y Suministros para la Industria de Servicios",48
+pa_goods_service_segment_49,"Equipos, Suministros y Accesorios para Deportes y Recreación",49
+pa_goods_service_segment_50,"Alimentos, Bebidas y Tabaco",50
+pa_goods_service_segment_51,Medicamentos y Productos Farmacéuticos,51
+pa_goods_service_segment_52,"Artículos Domésticos, Suministros y Productos Electrónicos de Consumo",52
+pa_goods_service_segment_53,"Ropa, Maletas y Productos de Aseo Personal",53
+pa_goods_service_segment_54,"Productos para Relojería, Joyería y Piedras Preciosas",54
+pa_goods_service_segment_55,"Publicaciones Impresas, Publicaciones Electrónicas y Accesorios",55
+pa_goods_service_segment_56,"Muebles, Mobiliario y Decoración",56
+pa_goods_service_segment_60,"Instrumentos Musicales, Juegos, Juguetes, Artes, Artesanías y Equipo educativo, Materiales, Accesorios y Suministros",60
+pa_goods_service_segment_70,"Servicios de Contratacion Agrícola, Pesquera, Forestal y de Fauna",70
+pa_goods_service_segment_71,"Servicios de Minería, Petróleo y Gas",71
+pa_goods_service_segment_72,"Servicios de Edificación, Construcción de Instalaciones y Mantenimiento",72
+pa_goods_service_segment_73,Servicios de Producción Industrial y Manufactura,73
+pa_goods_service_segment_76,"Servicios de Limpieza, Descontaminación y Tratamiento de Residuos",76
+pa_goods_service_segment_77,Servicios Medioambientales,77
+pa_goods_service_segment_78,"Servicios de Transporte, Almacenaje y Correo",78
+pa_goods_service_segment_80,"Servicios de Gestión, Servicios Profesionales de Empresa y Servicios Administrativos",80
+pa_goods_service_segment_81,"Servicios Basados en Ingeniería, Investigación y Tecnología",81
+pa_goods_service_segment_82,"Servicios Editoriales, de Diseño, de Artes Graficas y Bellas Artes",82
+pa_goods_service_segment_83,Servicios Públicos y Servicios Relacionados con el Sector Público,83
+pa_goods_service_segment_84,Servicios Financieros y de Seguros,84
+pa_goods_service_segment_85,Servicios de Salud,85
+pa_goods_service_segment_86,Servicios Educativos y de Formación,86
+pa_goods_service_segment_90,"Servicios de Viajes, Alimentación, Alojamiento y Entretenimiento",90
+pa_goods_service_segment_91,Servicios Personales y Domésticos,91
+pa_goods_service_segment_92,"Servicios de Defensa Nacional, Orden Publico, Seguridad y Vigilancia",92
+pa_goods_service_segment_93,Servicios Políticos y de Asuntos Cívicos,93
+pa_goods_service_segment_94,Organizaciones y Clubes,94
+pa_goods_service_segment_95,"Terrenos, Edificios, Estructuras y Vías",95
