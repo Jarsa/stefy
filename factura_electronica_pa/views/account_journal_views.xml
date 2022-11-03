@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_journal_view_form_inherit" model="ir.ui.view">
+        <field name="name">account.journal.view.form.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="electronic_invoicing" string="Electronic Invoicing" attrs="{'invisible': [('type', '!=', 'sale')]}">
+                    <group>
+                        <field name="used_in_electronic_invoicing" />
+                    </group>
+                    <group>
+                        <group>
+                            <field name="api_token" attrs="{'invisible': [('used_in_electronic_invoicing', '!=', True)], 'required': [('used_in_electronic_invoicing', '=', True)]}" />
+                            <field name="api_url" attrs="{'invisible': [('used_in_electronic_invoicing', '!=', True)], 'required': [('used_in_electronic_invoicing', '=', True)]}" widget="url"/>
+                            <field name="dPtoFacDF" attrs="{'invisible': [('used_in_electronic_invoicing', '!=', True)], 'required': [('used_in_electronic_invoicing', '=', True)]}" />
+                            <field name="template_id" options="{'no_create': True}" attrs="{'invisible': [('used_in_electronic_invoicing', '!=', True)], 'required': [('used_in_electronic_invoicing', '=', True)]}" />
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
