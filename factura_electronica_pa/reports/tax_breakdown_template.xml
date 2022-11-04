@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="invoice_tax_breakdown">
+        <table style="border:1px solid #E8E8E8;width:60%">
+            <t t-foreach="o.get_tax_breakdown_by_group().items()"
+               t-as="tax_group">
+                <t t-set="tax_group_name" t-value="tax_group[0].name"/>
+                <tr class="text-center">
+                    <td colspan="3" class="text-center"
+                        style="background-color:#E8E8E8;font-weight:bold">
+                        <t t-esc="'Desglose ITBMS' if 'ITBMS' in tax_group_name else 'Desglose ISC' if 'ISC' in tax_group_name else 'Desglose '+ tax_group_name"/>
+                    </td>
+                </tr>
+                <tr style="font-weight:bold;">
+                    <td class="text-center">Monto Base</td>
+                    <td class="text-center">%</td>
+                    <td class="text-center">Impuesto</td>
+                </tr>
+
+                <t t-foreach="tax_group[1]" t-as="tax_amounts">
+                    <t t-set="amount_type"
+                       t-value="tax_amounts['tax'].amount_type"/>
+                    <t t-set="tax_value"
+                       t-value="tax_amounts['tax_value'] if amount_type=='percent' else '{} ({})'.format(tax_amounts['tax_value'], amount_type)"/>
+                    <tr class="text-center">
+                        <td>
+                            <t t-esc="tax_amounts['total_tax_base_amount']"/>
+                        </td>
+                        <td>
+                            <t t-esc="tax_value"/>
+                        </td>
+                        <td>
+                            <t t-esc="tax_amounts['total_tax_amount']"/>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+        </table>
+    </template>
+</odoo>

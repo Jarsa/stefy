@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_invoice_send_wizard_form_inherit" model="ir.ui.view">
+        <field name="name">account.invoice.send.form.inherit</field>
+        <field name="model">account.invoice.send</field>
+        <field name="inherit_id" ref="account.account_invoice_send_wizard_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='option_email']" position="after">
+                <div name="option_electronic_invoice" attrs="{'invisible': [('country_code', '!=', 'PA')]}">
+                        <field name="is_electronic_invoice"  
+                               attrs="{'readonly': [('is_all_electronic_invoice', '=', False)]}"/>
+                        <b><label for="is_electronic_invoice"/></b>
+                    <div name="info_form_e_invoice" attrs="{'invisible': [('is_all_electronic_invoice', '=', True)]}" class="text-center text-muted d-inline-block">
+                        Electronic invoice is not yet successful for this document
+                    </div>
+                </div>
+                <div name="option_all_electronic_invoice">
+                    <field name="is_all_electronic_invoice" invisible="1"/>
+                    <field name="country_code" invisible="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
