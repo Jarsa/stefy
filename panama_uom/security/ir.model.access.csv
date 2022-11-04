@@ -1,2 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_panama_uom,access.panama_uom,model_panama_uom,uom.group_uom,1,1,1,1
