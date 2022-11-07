@@ -18,6 +18,10 @@
                 <field name="used_in_electronic_invoicing" invisible="1" />
             </field>
 
+             <field name="invoice_date" position="after">
+                <field name="date" string="Accounting Date" attrs="{'invisible': [('used_in_electronic_invoicing', '!=', True)]}"/>
+            </field>
+
             <notebook position="inside">
                 <page name="electronic_invoicing" string="Electronic Invoicing" attrs="{'invisible': [('used_in_electronic_invoicing', '!=', True)]}">
                     <group>
@@ -74,6 +78,16 @@ action = records.action_electronic_invoice()
         <field name="code">
 for rec in records:
     action = rec.action_electronic_invoice_sent()
+        </field>
+    </record>
+
+        <record id="e_invoice_update_acc_date_action" model="ir.actions.server">
+        <field name="name">E-Invoice and update Accounting Date</field>
+        <field name="model_id" ref="model_account_move"/>
+        <field name="binding_model_id" ref="model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">
+action = records.action_electronic_invoice_upd_acc_date()
         </field>
     </record>
 </odoo>

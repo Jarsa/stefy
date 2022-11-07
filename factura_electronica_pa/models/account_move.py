@@ -179,6 +179,12 @@ class AccountMove(models.Model):
         self.filtered(lambda inv: not inv.invoice_sent).write({'invoice_sent': True})
         return self.env.ref(self.journal_id.template_id.xml_id).report_action(self)
 
+    def action_electronic_invoice_upd_acc_date(self):
+        for move in self:
+            now = datetime.datetime.now()
+            if move.electronic_invoice_response == 'success':
+                move.date = now
+
     def action_electronic_invoice_sent(self):
         if self.country_code != "PA":
             raise ValidationError(_("This operation is restricted!"))
@@ -385,6 +391,9 @@ class AccountMove(models.Model):
     @api.depends('factura_result_id', 'electronic_invoice_sign')
     def _get_signed_xml_values(self):
         for invoice in self:
+            qr_code = ""
+            cufe = ""
+            dFecProc = ""
             if all([invoice.factura_result_id.is_success, invoice.factura_result_id.apcon_id]):
                 signed_xml = base64.b64decode(invoice.factura_result_id.signed_xml).decode("utf-8")
                 xml_file = io.StringIO(signed_xml)
@@ -394,12 +403,13 @@ class AccountMove(models.Model):
                 qr = root.find('.//{http://dgi-fep.mef.gob.pa}dQRCode')
                 dFecProc = root.findall('.//dFecProc')
                 if dCUFE:
-                    invoice.write({'qr_code': qr.text,
-                                   "cufe": dCUFE[0].text,
-                                   'dFecProc': dFecProc[0].text,})
-            else:
-                invoice.write({"cufe": "",
-                               'dFecProc': "", })
+                    qr_code = qr.text
+                    cufe = dCUFE[0].text
+                    dFecProc = dFecProc[0].text
+            
+            invoice.qr_code = qr_code
+            invoice.cufe = cufe
+            invoice.dFecProc = dFecProc
 
     def _is_invoice_sale(self):
         self.ensure_one()

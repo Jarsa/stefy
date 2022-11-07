@@ -8,7 +8,7 @@
     "author": "Eduweb Group",
     "website": "https://www.eduwebgroup.com",
     "category": "Invoicing & Payments",
-    "version": "1.1",
+    "version": "1.1.2",
     "depends": [
         "account",
         "web",

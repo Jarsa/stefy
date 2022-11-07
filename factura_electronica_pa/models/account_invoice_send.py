@@ -20,7 +20,7 @@ class AccountInvoiceSend(models.TransientModel):
             return action
 
     @api.onchange("is_electronic_invoice")
-    def _check_payslip_deduction(self):
+    def _onchange_einvoice_template(self):
         default_template = self.env.ref(self._get_mail_template(), raise_if_not_found=False)
         if self.is_electronic_invoice:
             for move in self.invoice_ids:
