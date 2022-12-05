@@ -661,11 +661,11 @@ class AccountMove(models.Model):
 
         reg_expression_amp = "&(?!#\d{4};|amp;)"
         
-        issuer_partner_address = issuer_partner.contact_address.replace("\n", " ").strip()[:100]
+        issuer_partner_address = issuer_partner._display_address(without_company=True).replace("\n", " ").strip()[:100]
         issuer_contact_address = re.sub(reg_expression_amp, "&amp;", issuer_partner_address)
         issuer_name = re.sub(reg_expression_amp, "&amp;", issuer_partner.name)
         
-        partner_address = partner.contact_address.replace("\n", " ").strip()[:100]
+        partner_address = partner._display_address(without_company=True).replace("\n", " ").strip()[:100]
         partner_contact_address = re.sub(reg_expression_amp, "&amp;", partner_address)
               
         values = {
